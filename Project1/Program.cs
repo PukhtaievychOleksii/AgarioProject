@@ -12,7 +12,7 @@ namespace HelloWorld
 
 
         public static Game game;
-       
+        public static Menu menu;
 
 
 
@@ -22,7 +22,9 @@ namespace HelloWorld
             streamWriter.WriteLine("WindowLenght:800");
             streamWriter.WriteLine("WindowHeight:500");
             streamWriter.Close();
-        
+            Content.Load();
+            menu = new Menu();
+            menu.Run();
             game = new Game();
             game.Run();
            

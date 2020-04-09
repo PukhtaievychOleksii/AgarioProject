@@ -63,7 +63,7 @@ namespace Project1
         private void Init()
         {
            // window = new RenderWindow(new VideoMode(800, 800), "SFML window");
-            Content.Load();
+            
             //create background
 
             
