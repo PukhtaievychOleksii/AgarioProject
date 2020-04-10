@@ -1,4 +1,5 @@
 ﻿using SFML.Graphics;
+using SFML.System;
 using SFML.Window;
 using System;
 using System.Collections.Generic;
@@ -10,6 +11,9 @@ namespace Project1
 {
     class Menu_Button:Actor
     {
+        public Vector2f initialOrigin;
+        public Vector2f initialScale;
+       
         public bool IsPressed(RenderWindow window)
         {
 
@@ -30,11 +34,18 @@ namespace Project1
             else return false;
         }
 
-        public void OnClick()
+        public void IsChose()
         {
+            
             this.obj.Origin = new SFML.System.Vector2f(10, 10);
-            this.obj.Scale = new SFML.System.Vector2f(0.8f, 0.8f);
+            this.obj.Scale = new SFML.System.Vector2f(1.5f, 1.5f);
 
+        }
+
+        public void IsnNotChose()
+        {
+            obj.Origin = initialOrigin;
+            obj.Scale = initialScale;
         }
     }
 }

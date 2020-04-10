@@ -17,6 +17,7 @@ namespace Project1
         public static Texture textureBurger;
         public static Texture textureStarSky;
         public static Texture textureStar;
+        public static Texture textureForest;
       
         public static void Load()
         {
@@ -25,6 +26,7 @@ namespace Project1
             textureBurger = new Texture(contentDir + "crab_meat.png");
             textureStarSky = new Texture(contentDir + "StarSky.jpg");
             textureStar = new Texture(contentDir + "Star.png");
+            textureForest = new Texture(contentDir + "Forest.jpg");
         }
 
        

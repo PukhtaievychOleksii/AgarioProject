@@ -42,11 +42,17 @@ namespace Project1
             return t;
 
         }
-        public static T CreateMenuButton<T>(this Menu menu,ActorArgs args) where T: Actor, new()
-        {
+        public static T CreateMenuActor<T>(this Menu menu,ActorArgs args) where T: Actor, new()
+        {  
             T t = new T();
             t.PostCreate(args);
-            menu.RegisterMenuButton(t);
+            if (t is Menu_Button)
+            {
+                (t as Menu_Button).initialOrigin = args.m_shape.Origin;
+                (t as Menu_Button).initialScale = args.m_shape.Scale;
+                menu.RegisterMenuButton(t as Menu_Button);
+            }
+            menu.RegisterMenuActor(t);
             return t;
         }
        
